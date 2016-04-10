@@ -1,0 +1,159 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Amandeep Grewal</title>
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <!-- Material Design fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700,800,900" type="text/css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,200,300,400,500,600,700,800,900" type="text/css">
+
+  <!-- build:css styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- endbuild -->
+
+  <!-- build:css styles/vendor.css -->
+  <!-- bower:css -->
+  <!-- endbower -->
+  <!-- endbuild -->
+
+  <link rel="stylesheet" href="/bower_components/bootstrap-material-design/dist/css/bootstrap-material-design.css" />
+  <link rel="stylesheet" href="/bower_components/bootstrap-material-design/dist/css/ripples.css" />
+
+</head>
+
+<body>
+  <!--[if lt IE 10]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
+
+  <div class="three-column-design">
+    <header></header>
+    <div class="three-column-design-body">
+      <main class="three-column-design-content content-container ">
+        <div class="toggles">
+          <div id="toggles-insert-point"></div>
+        </div>
+
+        <div id="items-insert-point"></div>
+      </main>
+      <nav class="three-column-design-nav sidebar">
+        <div class="name">
+          <div class="first-name">Amandeep</div>
+          <div class="last-name">Grewal</div>
+        </div>
+        <div class="links">
+          <div>
+            <a href="https://github.com/amandeepg">
+              <i class="mdi mdi-github-box"></i>/amandeepg</a>
+          </div>
+          <div>
+            <a href="https://twitter.com/amandeep">
+              <i class="mdi mdi-twitter"></i>/amandeep</a>
+          </div>
+          <div>
+            <a href="https://www.linkedin.com/in/amandeepgrewal">
+              <i class="mdi mdi-linkedin"></i>/amandeepgrewal</a>
+          </div>
+          <div>
+            <a href="mailto:me@amandeep.ca">
+              <i class="mdi mdi-email"></i> me@amandeep.ca</a>
+          </div>
+        </div>
+      </nav>
+      <aside class="three-column-design-ads"></aside>
+    </div>
+    <footer></footer>
+  </div>
+
+  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+  <script>
+  (function(b, o, i, l, e, r) {
+    b.GoogleAnalyticsObject = l;
+    b[l] || (b[l] =
+      function() {
+        (b[l].q = b[l].q || []).push(arguments)
+      });
+    b[l].l = +new Date;
+    e = o.createElement(i);
+    r = o.getElementsByTagName(i)[0];
+    e.src = 'https://www.google-analytics.com/analytics.js';
+    r.parentNode.insertBefore(e, r)
+  }(window, document, 'script', 'ga'));
+  ga('create', 'UA-XXXXX-X');
+  ga('send', 'pageview');
+  </script>
+
+  <!-- build:js scripts/vendor.js -->
+  <!-- bower:js -->
+  <!-- endbower -->
+  <!-- endbuild -->
+
+  <script src="/bower_components/jquery/dist/jquery.js"></script>
+  <script src="/bower_components/js-yaml/dist/js-yaml.js"></script>
+  <script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="/bower_components/bootstrap-material-design/dist/js/material.js"></script>
+  <script src="/bower_components/bootstrap-material-design/dist/js/ripples.js"></script>
+  <script src="/bower_components/modernizr/modernizr.js"></script>
+  <script src="/bower_components/lodash/lodash.js"></script>
+  <script src="/bower_components/handlebars/handlebars.js"></script>
+  <script src="/bower_components/velocity/velocity.js"></script>
+  <script src="/bower_components/velocity/velocity.ui.js"></script>
+
+
+  <script id="toggle-template" type="text/x-handlebars-template">
+    <div><i>Select togles to filter:</i></div>
+    {{#each toggles}}
+    <span class="btn btn-raised toggle tag-{{tag_name}}">
+          <i class="mdi tag-icon tag-{{tag_name}}"></i>
+          <span>{{visible_name}}</span>
+    </span>
+    {{/each}}
+  </script>
+
+  <script id="job-template" type="text/x-handlebars-template">
+    {{#each items}}
+    <div class="panel {{#each tags}}tag-{{name}} {{/each}}">
+      <span class="company-name">{{company_name}}</span><span class="job-title">{{job_title}}</span>
+      <div class="time-period"><i class="mdi mdi-calendar"></i> {{time_period}}</div>
+      <ul class="tags">
+        {{#each tags}}
+        <li>
+          <div class="tag-content tag-{{name}}"><i class="mdi tag-icon tag-{{name}}"></i> {{visible_name}}</div>
+        </li>
+        {{/each}}
+      </ul>
+      <div class="tags-space"></div>
+      <div class="description">
+        {{{description}}}
+      </div>
+      <div class="long-description">
+        {{#if hero_image}} {{#with hero_image}}
+        <img class="hero-image" src="{{src}}"></img>
+        {{/with}} {{/if}}
+        <div class="long-description-item">{{{long_description}}}</div>
+      </div>
+      {{#if external_link}}
+      <div class="external-link">
+        {{#each external_link}}
+        <div><a href="{{url}}"><i class="mdi mdi-link"></i> {{name}}</a></div>
+        {{/each}}
+      </div>
+      {{/if}}
+    </div>
+    {{/each}}
+  </script>
+
+  <!-- build:js scripts/main.js -->
+  <script src="scripts/projects_handlebars_templates.js"></script>
+  <script src="scripts/main.js"></script>
+  <!-- endbuild -->
+</body>
+
+</html>

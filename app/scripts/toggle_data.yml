@@ -1,0 +1,9 @@
+toggles:
+  - tag_name: job
+    visible_name: Work
+  - tag_name: personal-project
+    visible_name: Personal Project
+  - tag_name: android
+    visible_name: Android
+  - tag_name: js
+    visible_name: JavaScript

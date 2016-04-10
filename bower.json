@@ -1,0 +1,37 @@
+{
+  "name": "amandeep-ca",
+  "private": true,
+  "dependencies": {
+    "bootstrap-sass": "3.3.6",
+    "modernizr": "2.8.1",
+    "bootstrap-material-design": "^0.5.8",
+    "material-color": "2.2.0",
+    "mdi": "1.4.57",
+    "js-yaml": "3.5.2",
+    "handlebars": "^4.0.5",
+    "lodash": "^4.2.1",
+    "velocity": "^1.2.3",
+    "install": "^1.0.4"
+  },
+  "overrides": {
+    "bootstrap-sass": {
+      "main": [
+        "assets/stylesheets/_bootstrap.scss",
+        "assets/fonts/bootstrap/*",
+        "assets/javascripts/bootstrap.js"
+      ]
+    },
+    "mdi": {
+      "main": [
+        "fonts/*",
+        "scss/materialdesignicons.scss"
+      ]
+    },
+    "material-color": {
+      "main": [
+        "*.scss"
+      ]
+    }
+  },
+  "devDependencies": {}
+}

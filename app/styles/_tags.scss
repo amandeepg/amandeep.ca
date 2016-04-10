@@ -1,0 +1,67 @@
+$tag-triangle-size: 20px;
+$tag-background-color: $clr-blue-500;
+$tag-radius: 4px;
+$tag-top-padding: 5px;
+$tag-bottom-padding: 5px;
+
+.tags-space {
+  padding-top: $tag-triangle-size + $tag-bottom-padding;
+}
+
+.tags {
+  margin: 0;
+  padding: 0;
+  padding-top: $tag-top-padding;
+  right: $tag-triangle-size;
+  bottom: -12px;
+  list-style: none;
+
+  li, .tag-content {
+    float: left;
+    height: $tag-triangle-size;
+    line-height: $tag-triangle-size;
+    position: relative;
+    font-size: 12px;
+    padding-right: $tag-triangle-size / 4;
+    $shadow-opacity: 0.1;
+    // text-shadow: -1px 0 rgba(0, 0, 0, $shadow-opacity), 0 1px rgba(0, 0, 0, $shadow-opacity), 1px 0 rgba(0, 0, 0, $shadow-opacity), 0 -1px rgba(0, 0, 0, $shadow-opacity);
+ 
+  }
+
+  .tag-content {
+    margin-left: $tag-triangle-size / 2;
+    padding: 0 $tag-triangle-size / 4 0 $tag-triangle-size / 2;
+    background: $tag-background-color;
+    color: #fff;
+    text-decoration: none;
+    border-bottom-right-radius: $tag-radius;
+    border-top-right-radius: $tag-radius;
+
+    &:before {
+      content: "";
+      float: left;
+      position: absolute;
+      top: 0;
+      left: -$tag-triangle-size / 2;
+      width: 0;
+      height: 0;
+      border-color: transparent $tag-background-color transparent transparent;
+      border-style: solid;
+      border-width: $tag-triangle-size / 2 $tag-triangle-size / 2 $tag-triangle-size / 2 0;
+    }
+
+    &:after {
+      $dot-radius: 2px;
+      //
+      content: "";
+      position: absolute;
+      top: $tag-triangle-size / 2 - $dot-radius;
+      left: 0;
+      float: left;
+      width: $dot-radius * 2;
+      height: $dot-radius * 2;
+      border-radius: $dot-radius;
+      background: #fff;
+    }
+  }
+}

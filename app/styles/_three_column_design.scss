@@ -1,0 +1,36 @@
+.three-column-design {
+  height: inherit;
+}
+
+.three-column-design,
+.three-column-design-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.three-column-design-nav {
+  order: -1;
+}
+
+@media (min-width: $nav-width + $main-width + 10) {
+  .three-column-design {
+    height: 100vh;
+  }
+
+  .three-column-design-body {
+    flex-direction: row;
+    flex: 1 0 auto;
+  }
+
+  .three-column-design-content {
+    flex: 1 0 $main-width;
+  }
+
+  .three-column-design-nav {
+    flex: 0 0 $nav-width;
+  }
+
+  .three-column-design-ads {
+    flex: 0 1 $aside-width;
+  }
+}

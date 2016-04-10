@@ -1,0 +1,230 @@
+$icon-font-path: "../fonts/";
+
+// bower:scss
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import "bower_components/material-color/material-color.scss";
+@import "bower_components/mdi/scss/materialdesignicons.scss";
+
+// endbower
+
+$nav-width: 280px;
+$main-width: 670px;
+$aside-width: $nav-width;
+
+@import "_tags";
+@import "_browserupgrade";
+@import "_three_column_design";
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+@mixin toggle-off-on-colors($color) {
+  &.toggle.on {
+    color: hsla(0, 0%, 100%, 0.84);
+    background-color: $color;
+
+    &:hover {
+      background-color: darken($color, 10%);
+    }
+  }
+
+  &.toggle:not(.on) {
+    &:hover {
+      background-color: $color;
+    }
+  }
+
+  &.tag-content {
+    background: $color;
+
+    &:before {
+      border-color: transparent $color transparent transparent;
+    }
+  }
+}
+
+.content-container {
+  padding-top: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  i.tag-icon.tag-android.mdi {
+    @extend .mdi-android;
+  }
+
+  i.tag-icon.tag-job.mdi {
+    @extend .mdi-briefcase;
+  }
+
+  i.tag-icon.tag-js.mdi {
+    @extend .mdi-language-javascript;
+  }
+
+  i.tag-icon.tag-personal-project.mdi {
+    @extend .mdi-home;
+  }
+
+  i.tag-icon.tag-angular.mdi {
+    @extend .mdi-alpha;
+  }
+
+  .tag-android {
+    @include toggle-off-on-colors(#7fbb00);
+  }
+
+  .tag-js {
+    @include toggle-off-on-colors(darken(#f3df49, 15%));
+  }
+
+  .tag-angular {
+    @include toggle-off-on-colors(#b52e31);
+  }
+
+  .tag-job {
+    @include toggle-off-on-colors($clr-grey-500);
+  }
+
+  .tag-personal-project {
+    @include toggle-off-on-colors($clr-blue-400);
+  }
+
+  .toggles {
+    padding-bottom: 10px;
+  }
+
+  .panel {
+    margin-bottom: 20px;
+    padding: 10px;
+    position: relative;
+    cursor: pointer;
+
+    &:not(.on) {
+      display: none;
+    }
+
+    &.on {
+      display: block;
+    }
+    $title-font-size: 22px;
+
+    &.tag-job, &.tag-personal-project {
+      .time-period {
+        font-style: italic;
+        color: $clr-grey-500;
+
+        .mdi {
+          vertical-align: text-bottom;
+        }
+      }
+
+      .company-name {
+        font-weight: 500;
+        font-size: $title-font-size;
+        color: $clr-grey-900;
+      }
+    }
+
+    &.tag-job {
+      .job-title {
+        font-size: $title-font-size;
+
+        &::before {
+          content: '\00a0|\00a0';
+          color: $clr-grey-600;
+        }
+      }
+    }
+
+    .description {
+      font-weight: 400;
+      font-size: 16px;
+    }
+
+    .long-description {
+      display: none;
+      padding-top: 10px;
+
+      .hero-image, #ytplayer {
+        display: block;
+        margin: auto;
+        width: 90%;
+      }
+    }
+
+    .external-link {
+      padding-top: 10px;
+      padding-right: 10px;
+      position: absolute;
+      font-size: 15px;
+      top: 0;
+      right: 0;
+      $external-link-color: $clr-indigo-700;
+      color: $external-link-color;
+      text-align: right;
+
+      a {
+        color: $external-link-color;
+        text-decoration: none;
+        transition: color 250ms;
+
+        &:hover {
+          color: black;
+        }
+      }
+    }
+  }
+}
+
+.sidebar {
+  background-color: $clr-blue-900;
+  padding: 10px;
+  color: white;
+
+  .name {
+    font-weight: 700;
+    font-family: "Roboto Slab";
+    font-variant: small-caps;
+    text-align: center;
+    overflow: hidden;
+
+    .first-name {
+      font-size: 50px;
+      $letter-spacing: 5px;
+      letter-spacing: $letter-spacing;
+      margin-right: -$letter-spacing;
+    }
+
+    .last-name {
+      margin-top: -20px;
+      font-size: 30px;
+      $letter-spacing: 31px;
+      letter-spacing: $letter-spacing;
+      margin-right: -$letter-spacing;
+
+      @media (max-width: $nav-width + $main-width + 10) {
+        margin-right: 0;
+        margin-left: $letter-spacing;
+      }
+    }
+  }
+
+  .links {
+    margin-top: 10px;
+    font-size: 16px;
+    padding-left: 5px;
+
+    @media (max-width: $nav-width + $main-width + 10) {
+      text-align: center;
+    }
+
+    a {
+      color: white;
+    }
+  }
+}

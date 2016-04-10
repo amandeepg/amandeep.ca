@@ -1,0 +1,140 @@
+items:
+  - tags:
+      - name: job
+        visible_name: work
+      - name: android
+        visible_name: android
+    company_name: Twitter
+    job_title: Software Engineer
+    time_period: 2014 - present
+    description:
+      Various Android projects
+    long_description: |
+      Worked on multiple teams working on mostly Android projects and a few backend projects.
+  - tags:
+      - name: personal-project
+        visible_name: personal project
+      - name: android
+        visible_name: android
+    company_name: WiFi QR Code Generator
+    time_period: 2011 - present
+    description:
+      Android app that can create a QR Code for a WiFi network. 1M+ downloads, 2k+ ratings, 3.8★
+    long_description: |
+      Features:
+      <ul>
+        <li> Create QR Code for a WiFi network </li>
+        <li> Material design </li>
+        <li> Save networks for later </li>
+        <li> Detect remembered networks by the Android system </li>
+        <li> Using root, read network passwords for remembered networks </li>
+        <li> Share QR code </li>
+        <li> Landscape and tablet support </li>
+        <li> Marshmallow permissions support </li>
+      </ul>
+      <p></p>
+      Also built associated <a href="https://wifiqr.amandeep.ca">product website</a>.
+    hero_image:
+      src:
+        images/wifiqr-nexi.png
+    external_link:
+      - url: https://play.google.com/store/apps/details?id=com.madeng.wifiqr
+        name: Google Play
+      - url: https://wifiqr.amandeep.ca
+        name: Website
+  - tags:
+      - name: personal-project
+        visible_name: personal project
+      - name: js
+        visible_name: javascript
+    company_name: Matchbox
+    time_period: '2015'
+    description:
+      Dashboard for Mint that shows you at-a-glance where you spend and earn your money
+    long_description: |
+      Features:
+      <ul>
+        <li> Client-side processing so no data is ever uploaded. </li>
+        <li> Average monthly total for each category. </li>
+        <li> Monthly graph for each category. </li>
+        <li> Link to list of transactions for each category. </li>
+      </ul>
+    hero_image:
+      src:
+        images/matchbox.png
+    external_link:
+      - url: https://matchbox.amandeep.ca
+        name: Website
+      - url: https://github.com/amandeepg/matchbox
+        name: GitHub
+  - tags:
+      - name: personal-project
+        visible_name: university project
+      - name: android
+        visible_name: android
+    company_name: IronEye
+    time_period: '2014'
+    description:
+      App for capstone project to track workout using Kinect cameras
+    long_description: |
+      Created for 4th Year Engineering Science Capstone Design, in a team of 4.
+      <p></p>
+      Developed Android app that was to be used in companion with the rest of the IronEye system to
+      provide novice lifters a safe way to learn proper weight lifting technique
+      at their own pace by using a real time display to show errors in the their form,
+      and to serve as a means of tracking and recording workouts.
+      <p></p>
+      The mobile app notifies the user when their form is incorrect,
+      and after the workout, it can be used to view statistics, charts, and re-watch their previous workouts.
+    hero_image:
+      src:
+        https://raw.githubusercontent.com/amandeepg/IronEye-Android/master/screenshots/grid.png
+    external_link:
+      - url: https://github.com/amandeepg/IronEye-Android
+        name: GitHub
+  - tags:
+      - name: job
+        visible_name: work
+      - name: android
+        visible_name: android
+      - name: js
+        visible_name: javascript
+    company_name: Twitter
+    job_title: Software Engineer Intern
+    time_period: 'Summer 2012 & 2013'
+    description:
+      Mobile Growth team
+    long_description: |
+      Worked on the Growth team developing features for Mobile Web and Android.
+  - tags:
+      - name: personal-project
+        visible_name: university project
+    company_name: Autonomous Robot
+    time_period: 2012
+    description:
+       Designed and constructed robot to autonomously sense and manoeuvre through its environment
+    long_description: |
+      <iframe id="ytplayer" type="text/html" height="360"
+      src="https://www.youtube.com/embed/l2o--sz0X1I?modestbranding=0"
+      frameborder="0"/>
+      Created the electrical circuits, as part of the 3-person team, along with assisting in coding and structural construction.
+      <p></p>
+      Placed 4th out of 50+ teams.
+  - tags:
+      - name: job
+        visible_name: work
+      - name: android
+        visible_name: android
+    company_name: ModiFace
+    job_title: Software Engineer Intern
+    time_period: Summer 2011
+    description:
+      Developed Android apps for the cosmetic industry using augmented reality
+    long_description: |
+      Created virtual makeover Android applications for the cosmetics industry, including the first versions of
+      <a href="https://play.google.com/store/apps/details?id=com.modiface.makeup">Makeup</a>,
+      <a href="https://play.google.com/store/apps/details?id=com.modiface.hair">Ultimate Hairstyle Try-On</a>, and
+      <a href="https://play.google.com/store/apps/details?id=com.modiface.nails">Virtual Nail Salon</a>.
+      <p></p>
+      Worked with Samsung to release some apps exclusive to Samsung's App Store,
+      optimized for Samsung’s phones & tablets.
